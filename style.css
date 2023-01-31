@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Yeon+Sung&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yeon Sung', cursive;
+    transition: ease-in-out 0.4s;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f05dda;
+    /* background: linear-gradient(#091921, #9d7704,  #091921); */
+}
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#e91e63, rgb(241, 248, 247), #ffc107);
+    clip-path: circle(20% at 15% 15%);
+}
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, orange, orange, #e9d1e93f);
+    clip-path: circle(15% at 72% 90%);
+}
+main{
+    width: 75%;
+    max-width: 375px;
+    /* height: 90vh; */
+    padding: 10px 3px;   
+    border-radius: 20px;    
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.09);  
+    backdrop-filter: blur(15px);
+    border-left: 1px solid orange;           
+    border-top: 1px solid orange;  
+    /* background-color: #e91e63;          */
+}
+main:hover{
+    box-shadow: 5px 5px 30px orange; 
+}
+#checout-title{
+    /* margin: 10px; */
+    text-align: center;
+    color: lemonchiffon;
+}
+.product{
+    display: flex;
+    align-items: center;
+    margin: 10px 5px;  
+}
+img{
+    width: 50%;
+    height: 180px;
+    border-radius: 20px;   
+    margin-right: 10px;
+    box-shadow: rgba(255, 255, 255, 0.56) 0px 22px 70px 4px;
+}
+img:hover{
+    /* opacity: 0.4; */
+    scale: 1.1;
+}
+h2, h5{
+    /* margin: 5px; */
+    color: lemonchiffon;
+    text-align: center;
+}
+p strong {
+    color: rgb(249, 209, 134);
+    margin: 3px;
+}
+p strong::before {
+    content: ' $';
+}
+p span {
+    text-decoration: line-through;
+    color: lemonchiffon;
+}
+.quantity-controller{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    padding: 10px 24px;
+    width: 50%;
+    color: lemonchiffon;
+}
+.quantity-controller:hover{
+   background: rgba(255, 166, 0, 0.122);
+}
+i{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 166, 0, 0.5);
+}
+i:hover{
+    transform: scale(1.1);
+}
+.quantity{
+    margin: 0 14px;
+}
+.remove-product{
+    padding: 7px;
+    border-radius: 7px;    
+    margin: 4px;
+    color: lemonchiffon;
+    background-color: rgba(255, 166, 0, 0.692);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.remove-product:hover{
+    opacity: 0.5;
+    transform: scale(1.06);
+}
+.product-line-price{
+    /* margin: 5px; */
+    color: lemonchiffon;
+}
+.price{
+    color: rgb(204, 248, 255);
+    font-size: 0.8rem;
+}
+.price::before{
+    content: "$"
+}
+/* card start */
+.buy-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem;
+    border-top: 1px solid lemonchiffon;;
+    color: lemonchiffon;
+}
+#subtotalCart{
+    color: white
+}
+#taxRateCart{
+    color: white
+}
+#shippingCart{
+    color: white
+}
+#totalCart{
+    color: white;
+    font-size: 1.5rem;
+}
+#totalCart::after, #shippingCart::after, #taxRateCart::after, #subtotalCart::after {
+    content: ' $';
+}
+#nnote{
+    font-size: 0.8rem;
+    color: #fee392;
+    margin-left:1rem;
+}
+#copy{
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.17);
+    text-align: center;
+    margin: 0 4rem;
+    border-radius: 0.5rem;
+}
